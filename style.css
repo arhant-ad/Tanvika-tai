@@ -31,7 +31,7 @@ body {
     width: 40px;
     height: 40px;
     border: 2px solid rgba(16, 185, 129, 0.5);
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    transition: width 0.1s, height 0.1s, background-color 0.1s;
 }
 
 .cursor-outline.hover {
@@ -186,7 +186,7 @@ body {
 }
 
 .floating {
-    animation: float 6s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
 }
 
 .floating-delay-1 {
@@ -215,7 +215,7 @@ body {
 }
 
 .pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
+    animation: pulse-glow 1s ease-in-out infinite;
 }
 
 /* Text Scramble Effect Base */
@@ -253,7 +253,7 @@ body {
 }
 
 .neon-flicker {
-    animation: neon-flicker 3s infinite;
+    animation: neon-flicker 1.5s infinite;
 }
 
 /* Circuit Board Background Pattern */
@@ -339,7 +339,7 @@ body {
 /* Project Card 3D Tilt */
 .project-card {
     transform-style: preserve-3d;
-    transition: transform 0.5s;
+    transition: transform 0.3s;
 }
 
 .project-card-inner {
@@ -368,7 +368,7 @@ body {
             rgba(255, 255, 255, 0.1) 50%,
             transparent 70%);
     transform: rotate(45deg);
-    transition: all 0.5s;
+    transition: all 0.3s;
     opacity: 0;
 }
 
@@ -431,7 +431,7 @@ body {
 .stagger-reveal {
     opacity: 0;
     transform: translateY(50px);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .stagger-reveal.active {
@@ -484,7 +484,7 @@ body {
     height: 100%;
     background: linear-gradient(90deg, #10b981, #06b6d4);
     width: 0;
-    transition: width 1.5s ease-out;
+    transition: width 1s ease-out;
     box-shadow: 0 0 10px #10b981;
 }
 
@@ -566,7 +566,7 @@ body {
     height: 100%;
     background: linear-gradient(90deg, #10b981, #06b6d4);
     width: 0;
-    transition: width 2s ease-out;
+    transition: width 1.2s ease-out;
     border-radius: 3px;
     position: relative;
 }
@@ -721,7 +721,7 @@ body {
 /* Navigation Link Hover Effect */
 .nav-link {
     position: relative;
-    transition: color 0.25s ease;
+    transition: color 0.15s ease;
 }
 
 .nav-link::after {
@@ -732,7 +732,7 @@ body {
     width: 0;
     height: 2px;
     background: #10b981;
-    transition: width 0.3s ease;
+    transition: width 0.2s ease;
 }
 
 .nav-link:hover::after,
@@ -748,7 +748,7 @@ body {
 .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 .reveal.active {
@@ -822,7 +822,7 @@ body {
     position: relative;
     overflow: hidden;
     transform-style: preserve-3d;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
     background: rgba(10, 13, 25, 0.65);
     border: 1px solid rgba(var(--accent-rgb), 0.25);
     backdrop-filter: blur(16px);
@@ -896,7 +896,7 @@ body {
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.08);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-    transition: transform 0.35s ease, background 0.35s ease;
+    transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .cert-card:hover .cert-icon {
@@ -1002,6 +1002,252 @@ body {
     .achievement-card,
     .activity-card {
         margin-bottom: 1rem;
+    }
+
+    /* Hero Section Mobile Improvements */
+    .hero-title {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem !important;
+        height: 2rem !important;
+    }
+
+    .hero-description {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Mobile Menu Improvements */
+    #mobileMenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(16, 185, 129, 0.3);
+        z-index: 1000;
+    }
+
+    #mobileMenu a {
+        display: block;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    #mobileMenu a:hover {
+        background: rgba(16, 185, 129, 0.1);
+        color: #10b981;
+    }
+
+    /* Profile Image Mobile Adjustments */
+    .profile-image {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    /* Floating Badges Mobile Positioning */
+    .floating-badge-left {
+        left: -2rem !important;
+        top: 30% !important;
+    }
+
+    .floating-badge-right {
+        right: -2rem !important;
+        bottom: 30% !important;
+    }
+
+    .floating-badge-top {
+        top: -1rem !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    /* Button Mobile Improvements */
+    .hero-buttons {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .hero-buttons a {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 0.75rem 1.5rem !important;
+    }
+
+    /* Social Links Mobile */
+    .social-links {
+        justify-content: center !important;
+        gap: 1.5rem !important;
+    }
+
+    /* About Section Mobile */
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1rem !important;
+    }
+
+    .about-stats > div {
+        padding: 1rem 0.5rem !important;
+    }
+
+    .about-stats .counter {
+        font-size: 1.5rem !important;
+    }
+
+    .about-stats .text-xs {
+        font-size: 0.7rem !important;
+    }
+
+    /* Terminal Card Mobile */
+    .terminal-card {
+        font-size: 0.8rem !important;
+        padding: 1rem !important;
+    }
+
+    /* Skills Section Mobile */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+        gap: 1rem !important;
+    }
+
+    .skill-orb {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .skill-orb i {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    /* Section Headers Mobile */
+    .section-header {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        text-align: center !important;
+    }
+
+    .section-title {
+        font-size: 2rem !important;
+    }
+
+    /* Container Mobile Padding */
+    .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Navigation Mobile */
+    nav {
+        padding: 1rem !important;
+    }
+
+    .nav-brand {
+        font-size: 1.25rem !important;
+    }
+
+    /* Hide custom cursor on mobile */
+    .cursor-dot,
+    .cursor-outline {
+        display: none !important;
+    }
+
+    /* Reduce animations for mobile performance */
+    .floating {
+        animation-duration: 4s !important;
+    }
+
+    .pulse-glow {
+        animation-duration: 2s !important;
+    }
+
+    /* Matrix and particle effects lighter on mobile */
+    #matrixCanvas {
+        opacity: 0.02 !important;
+    }
+
+    #particleCanvas {
+        opacity: 0.3 !important;
+    }
+
+    /* Mobile Menu Button */
+    #mobileMenuBtn {
+        padding: 0.5rem !important;
+    }
+
+    /* Touch-friendly interactions */
+    a, button {
+        min-height: 44px !important;
+        min-width: 44px !important;
+    }
+
+    /* Reduce motion for mobile performance */
+    @media (prefers-reduced-motion: reduce) {
+        .floating, .pulse-glow, .neon-flicker {
+            animation: none !important;
+        }
+    }
+
+    /* Better text rendering on mobile */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+
+    /* Improve tap targets */
+    .nav-link, .social-link {
+        padding: 0.75rem !important;
+        margin: -0.75rem !important;
+    }
+
+    /* Mobile scrollbar hiding */
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+
+    /* Better form inputs on mobile */
+    input, textarea {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+    }
+
+    /* Mobile-specific performance optimizations */
+    .mobile-optimized {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+    }
+
+    /* Improve mobile scrolling */
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Better mobile focus states */
+    a:focus, button:focus {
+        outline: 2px solid #10b981;
+        outline-offset: 2px;
+    }
+
+    /* Mobile-friendly hover states */
+    @media (hover: none) {
+        .hover\:scale-105:hover {
+            transform: none !important;
+        }
     }
 }
 

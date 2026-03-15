@@ -17,19 +17,19 @@
         .progress-90 { --progress: 90%; }
         .progress-85 { --progress: 85%; }
         .progress-100 { --progress: 100%; }
-        .delay-05s { animation-delay: 0.5s; }
-        .delay-1s { animation-delay: 1s; }
-        .delay-15s { animation-delay: 1.5s; }
-        .delay-2s { animation-delay: 2s; }
-        .delay-25s { animation-delay: 2.5s; }
-        .delay-3s { animation-delay: 3s; }
-        .delay-35s { animation-delay: 3.5s; }
-        .delay-4s { animation-delay: 4s; }
-        .delay-45s { animation-delay: 4.5s; }
-        .anim-duration-4s { animation-duration: 4s; }
-        .anim-duration-5s { animation-duration: 5s; }
-        .anim-duration-6s { animation-duration: 6s; }
-        .anim-duration-7s { animation-duration: 7s; }
+        .delay-05s { animation-delay: 0.2s; }
+        .delay-1s { animation-delay: 0.4s; }
+        .delay-15s { animation-delay: 0.6s; }
+        .delay-2s { animation-delay: 0.8s; }
+        .delay-25s { animation-delay: 1s; }
+        .delay-3s { animation-delay: 1.2s; }
+        .delay-35s { animation-delay: 1.4s; }
+        .delay-4s { animation-delay: 1.6s; }
+        .delay-45s { animation-delay: 1.8s; }
+        .anim-duration-4s { animation-duration: 1.5s; }
+        .anim-duration-5s { animation-duration: 2s; }
+        .anim-duration-6s { animation-duration: 2.5s; }
+        .anim-duration-7s { animation-duration: 3s; }
         .transition-delay-01s { transition-delay: 0.1s; }
         .transition-delay-02s { transition-delay: 0.2s; }
         .transition-delay-03s { transition-delay: 0.3s; }
@@ -54,7 +54,7 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-emerald-500/20">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold font-mono text-emerald-400 hover:text-emerald-300 transition-colors">
+            <a href="#" class="text-2xl font-bold font-mono text-emerald-400 hover:text-emerald-300 transition-colors nav-brand">
                 &lt;Tanvika /&gt;
             </a>
 
@@ -114,23 +114,23 @@
                     <span>System Secure</span>
                 </div>
 
-                <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight">
+                <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight hero-title">
                     Hi, I'm <span
                         class="glitch-text text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400"
                         data-text="Tanvika">Tanvika</span>
                 </h1>
 
-                <div class="h-8 md:h-12">
+                <div class="h-8 md:h-12 hero-subtitle">
                     <span id="typewriter" class="text-xl md:text-2xl text-slate-400 font-mono"></span>
                     <span class="terminal-cursor"></span>
                 </div>
 
-                <p class="text-slate-400 text-lg max-w-lg leading-relaxed">
+                <p class="text-slate-400 text-lg max-w-lg leading-relaxed hero-description">
                     Cybersecurity Enthusiast & Full Stack Developer passionate about securing digital assets and
                     building robust web applications.
                 </p>
 
-                <div class="flex flex-wrap gap-4 pt-4">
+                <div class="flex flex-wrap gap-4 pt-4 hero-buttons">
                     <a href="#contact"
                         class="group px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold rounded-lg transition-all transform hover:scale-105 flex items-center gap-2">
                         <i data-lucide="terminal" class="w-5 h-5"></i>
@@ -143,7 +143,7 @@
                     </a>
                 </div>
 
-                <div class="flex gap-4 pt-6">
+                <div class="flex gap-4 pt-6 social-links">
                     <a href="#" class="text-slate-400 hover:text-emerald-400 transition-colors" title="GitHub">
                         <i data-lucide="github" class="w-6 h-6"></i>
                     </a>
@@ -165,21 +165,21 @@
                         class="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full blur opacity-30 pulse-glow">
                     </div>
                     <div
-                        class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-emerald-500/30 bg-slate-900 holographic">
+                        class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-emerald-500/30 bg-slate-900 holographic profile-image">
                         <img src="Tanvika tai.png" alt="Tanvika Padole"
                             class="w-full h-full object-cover">
                     </div>
                     <!-- Floating badges -->
                     <div
-                        class="absolute -right-4 top-10 bg-slate-800/90 backdrop-blur border border-emerald-500/30 p-3 rounded-lg shadow-xl floating floating-delay-1 shield-pulse">
+                        class="absolute -right-4 top-10 bg-slate-800/90 backdrop-blur border border-emerald-500/30 p-3 rounded-lg shadow-xl floating floating-delay-1 shield-pulse floating-badge-right">
                         <i data-lucide="shield-check" class="w-8 h-8 text-emerald-400"></i>
                     </div>
                     <div
-                        class="absolute -left-4 bottom-10 bg-slate-800/90 backdrop-blur border border-cyan-500/30 p-3 rounded-lg shadow-xl floating floating-delay-2">
+                        class="absolute -left-4 bottom-10 bg-slate-800/90 backdrop-blur border border-cyan-500/30 p-3 rounded-lg shadow-xl floating floating-delay-2 floating-badge-left">
                         <i data-lucide="code-2" class="w-8 h-8 text-cyan-400"></i>
                     </div>
                     <div
-                        class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-slate-800/90 backdrop-blur border border-purple-500/30 px-3 py-1 rounded-full shadow-xl floating floating-delay-3">
+                        class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-slate-800/90 backdrop-blur border border-purple-500/30 px-3 py-1 rounded-full shadow-xl floating floating-delay-3 floating-badge-top">
                         <span class="text-xs font-mono text-purple-400">Full Stack</span>
                     </div>
                 </div>
@@ -190,15 +190,15 @@
     <!-- About Section -->
     <section id="about" class="py-20 relative z-10 circuit-bg">
         <div class="container mx-auto px-6">
-            <div class="flex items-center gap-4 mb-12 stagger-reveal">
+            <div class="flex items-center gap-4 mb-12 stagger-reveal section-header">
                 <div class="h-px bg-emerald-500/30 flex-1"></div>
-                <h2 class="text-3xl md:text-4xl font-bold text-white font-mono neon-flicker">
+                <h2 class="text-3xl md:text-4xl font-bold text-white font-mono neon-flicker section-title">
                     <span class="text-emerald-400">></span> About Me
                 </h2>
                 <div class="h-px bg-emerald-500/30 flex-1"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto about-grid">
                 <div class="space-y-6 text-slate-300 leading-relaxed">
                     <div class="bg-slate-900/50 border border-emerald-500/20 rounded-lg p-6 backdrop-blur-sm">
                         <p class="mb-4">
@@ -218,7 +218,7 @@
                         </p>
                     </div>
 
-                    <div class="grid grid-cols-3 gap-4 stagger-reveal">
+                    <div class="grid grid-cols-3 gap-4 stagger-reveal about-stats">
                         <div
                             class="text-center p-4 bg-slate-800/50 rounded-lg border border-emerald-500/20 hover:border-emerald-500/50 transition-all hover:transform hover:scale-105">
                             <div class="text-2xl font-bold text-emerald-400 mb-1 counter" data-target="3">0</div>
@@ -326,7 +326,7 @@
                     <!-- Skill Orbits -->
                     <div class="relative w-full h-96 md:h-[500px]">
                         <!-- Inner Orbit - Languages -->
-                        <div class="absolute inset-0 animate-spin" style="animation-duration: 20s;">
+                        <div class="absolute inset-0 animate-spin" style="animation-duration: 8s;">
                             <div class="absolute top-8 left-1/2 transform -translate-x-1/2 skill-orb bg-emerald-500/20 border-emerald-500/50" data-skill="Python" data-level="95">
                                 <i data-lucide="code" class="w-5 h-5 text-emerald-400"></i>
                             </div>
@@ -342,7 +342,7 @@
                         </div>
 
                         <!-- Middle Orbit - Frameworks/Tools -->
-                        <div class="absolute inset-8 animate-spin" style="animation-duration: 25s; animation-direction: reverse;">
+                        <div class="absolute inset-8 animate-spin" style="animation-duration: 10s; animation-direction: reverse;">
                             <div class="absolute top-4 left-1/2 transform -translate-x-1/2 skill-orb bg-emerald-500/15 border-emerald-500/40" data-skill="React" data-level="88">
                                 <i data-lucide="atom" class="w-4 h-4 text-emerald-400"></i>
                             </div>
@@ -358,7 +358,7 @@
                         </div>
 
                         <!-- Outer Orbit - Security Tools -->
-                        <div class="absolute inset-16 animate-spin" style="animation-duration: 30s;">
+                        <div class="absolute inset-16 animate-spin" style="animation-duration: 12s;">
                             <div class="absolute top-2 left-1/2 transform -translate-x-1/2 skill-orb bg-red-500/10 border-red-500/30" data-skill="Kali Linux" data-level="90">
                                 <i data-lucide="shield" class="w-4 h-4 text-red-400"></i>
                             </div>
@@ -376,7 +376,7 @@
                 </div>
 
                 <!-- Skill Details Cards -->
-                <div class="grid md:grid-cols-3 gap-6 mt-16">
+                <div class="grid md:grid-cols-3 gap-6 mt-16 skills-grid">
                     <!-- Programming Languages -->
                     <div class="skill-detail-card bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300 stagger-reveal">
                         <div class="flex items-center gap-3 mb-4">

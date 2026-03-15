@@ -50,7 +50,7 @@ function drawMatrix() {
 // Animation loop
 let matrixInterval;
 function startMatrix() {
-    matrixInterval = setInterval(drawMatrix, 50);
+    matrixInterval = setInterval(drawMatrix, 25);
 }
 
 // Pause matrix when tab is hidden to save resources
@@ -243,7 +243,7 @@ const counterObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const counter = entry.target;
             const target = parseInt(counter.getAttribute('data-target'));
-            const duration = 2000;
+            const duration = 1000;
             const increment = target / (duration / 16);
             let current = 0;
             
@@ -275,7 +275,7 @@ const progressObserver = new IntersectionObserver((entries) => {
             const progress = bar.style.getPropertyValue('--progress');
             setTimeout(() => {
                 bar.style.width = progress;
-            }, 200);
+            }, 100);
             progressObserver.unobserve(entry.target);
         }
     });
@@ -298,10 +298,10 @@ function createBinaryParticle() {
     
     setTimeout(() => {
         particle.remove();
-    }, 10000);
+    }, 5000);
 }
 
-setInterval(createBinaryParticle, 2000);
+setInterval(createBinaryParticle, 1000);
 
 // Typewriter Effect
 const typewriterText = [
@@ -326,15 +326,15 @@ function typeWriter() {
         charIndex++;
     }
 
-    let typeSpeed = isDeleting ? 50 : 100;
+    let typeSpeed = isDeleting ? 25 : 50;
 
     if (!isDeleting && charIndex === currentText.length) {
-        typeSpeed = 2000;
+        typeSpeed = 1000;
         isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         typewriterIndex = (typewriterIndex + 1) % typewriterText.length;
-        typeSpeed = 500;
+        typeSpeed = 250;
     }
 
     setTimeout(typeWriter, typeSpeed);
@@ -356,6 +356,20 @@ mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
     });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+    }
+});
+
+// Close mobile menu on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+    }
 });
 
 // Smooth Scroll with Offset for Fixed Header
@@ -575,15 +589,15 @@ function contactTypeWriter() {
         contactCharIndex++;
     }
 
-    let typeSpeed = contactIsDeleting ? 30 : 60;
+    let typeSpeed = contactIsDeleting ? 15 : 30;
 
     if (!contactIsDeleting && contactCharIndex === currentMessage.length) {
-        typeSpeed = 3000;
+        typeSpeed = 1500;
         contactIsDeleting = true;
     } else if (contactIsDeleting && contactCharIndex === 0) {
         contactIsDeleting = false;
         contactMessageIndex = (contactMessageIndex + 1) % contactMessages.length;
-        typeSpeed = 500;
+        typeSpeed = 250;
     }
 
     setTimeout(contactTypeWriter, typeSpeed);
@@ -591,7 +605,7 @@ function contactTypeWriter() {
 
 // Start contact typewriter after page load
 window.addEventListener('load', () => {
-    setTimeout(contactTypeWriter, 2000);
+    setTimeout(contactTypeWriter, 1000);
 });
 
 // Terminal Interface
